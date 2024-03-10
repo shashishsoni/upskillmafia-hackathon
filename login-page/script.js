@@ -1,8 +1,9 @@
 let emailInput = document.querySelector(".email-inputvalue");
+let emailInputPasswordchange = document.querySelector(".email-inputvalue2");
 let passwordInput = document.querySelector(".password-inputvalue");
 let loginButton = document.querySelector(".loginbutton");
 let forgotPassword = document.querySelector(".forgetpasswordbtn");
-let createAccount = document.querySelector(".createaccountbtn");
+let confirmBtn = document.querySelector(".confirmbtn");
 let loginPage = document.querySelector(".login-page");
 let passwordPAge = document.querySelector(".password-page");
 
@@ -19,17 +20,23 @@ loginButton.addEventListener("click", (e) => {
 });
 
 //create account btn
-createAccount.addEventListener("click",()=>
+let emailPasswordchange;
+confirmBtn.addEventListener("click",(e)=>
 {
-    console.log("account bnao...");
+    console.log("password confirm...");
+    emailPasswordchange = emailInputPasswordchange.value;
+    
+    console.log(emailPasswordchange);
+
 })
 
 //forgot password btn
-let togglevar = 0;
 forgotPassword.addEventListener("click", ()=>
 {
-    console.log("New password...");
-    togglevar = 1;
+    // console.log("New password...");
+    
+   
+
     loginPage.classList.add("active");
     passwordPAge.classList.remove("active");
 
